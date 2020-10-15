@@ -1,0 +1,18 @@
+html {
+    margin:    0 auto;
+    max-width: 600px;
+}
+
+
+/* Bootstrap customization */
+/* set a max-width for horizontal fluid layout and make it centered */
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 600px;
+}
+
+.with-margin {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}

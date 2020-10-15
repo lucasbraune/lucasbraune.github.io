@@ -1,0 +1,835 @@
+<!DOCTYPE HTML>
+
+<html lang="pt-br">
+
+  <head>
+    <meta charset="utf-8">
+
+    <title>Álgebra Linear</title>
+
+    <style>
+
+      html {
+          margin:    0 auto;
+          max-width: 600px;
+      }
+
+      body {
+        font-family: "arial";
+      }
+
+      table#programa {
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      table#programa td, table#programa th {
+        border: 1px solid #78909C;
+        text-align: left;
+        padding: 8px;
+      }
+
+      table#programa th {
+        background-color: #78909C;
+      }
+
+      table#programa tr {
+        background-color: #CFD8DC;
+      }
+
+    </style>
+
+  </head>
+  <!--
+  <body bgcolor="#B4C4DE">
+  -->
+  <body bgcolor="#B0BEC5">
+
+    <div>
+      <table style="width:100%">
+        <tr>
+          <td>
+            <h1>Álgebra Linear 2</h1>
+            <b>Onde:</b> Sala 205 N do
+            <a href="http://www3.uniriotec.br/UNIRIO-CCET/">CCET</a><br>
+            <b>Quando:</b> Quartas e sextas, das 18h às 20h<br>
+            <b>Começo das aulas:</b> Quarta-feira, dia 31/08/2016 <br>
+            <b>Professor:</b> <a href="../../index.html">Lucas Braune</a>
+          </td>
+          <td>
+            <img src="logo_unirio.jpg" alt="Logo UNIRIO" height="150" align="right">
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <div>
+
+
+      <h2>Bibliografia</h2>
+
+      O livro-texto para o curso é:
+      <ul>
+        <li> Gilbert Strang, <i>Álgebra Linear e suas Aplicações</i>, tradução
+          da quarta edição norte-americana.
+      </ul>
+      É recomendado ao aluno adquirir uma cópia. Ele está disponível
+      <a href="https://www.amazon.com.br/Álgebra-Linear-Aplicações-Gilbert-Strang/dp/8522107440">na Amazon</a>.
+
+      <!--
+      <img src="Strang.jpg" height="250" alt="Álgebra Linear e suas Aplicações" align ="right">
+      -->
+
+    </div>
+
+
+
+
+    <div>
+
+      <h2>Avaliação</h2>
+      <p>
+        A avaliação do curso será através de listas de exercícios semanais
+        (25% da nota final) e três provas (75% da nota final). Além disso, o
+        aluno terá a opção de fazer uma prova final para substituir a menor
+        de suas três notas em prova.
+      </p>
+
+    </div>
+
+
+    <!--
+      <div>
+
+        <h2>Plano do curso</h2>
+
+        <p>
+          <ul>
+            <li> Prova 1: capítulos 1 e 2 do livro (revisão). 6 aulas.
+            <li> Prova 2: capítulos 3, 4 e 5 do livro. 10 aulas.
+            <li> Prova 3: capítulos 6, 7 e 8 do livro. 10 aulas.
+          </ul>
+        </p>
+
+      </div>
+    -->
+
+
+
+
+
+
+    <div>
+
+      <h2>Listas de exercícios</h2>
+
+      <!--
+      <p>
+        O principal objetivo das listas de exercícios é ajudar o
+        aluno a praticar o que ele aprender na aula. Minha intenção
+        é que nenhum exercício seja muito difícil, mas admito que
+        em conjunto eles possam dar algum trabalho.
+      </p>
+
+      <p>
+        As soluções das listas devem ser entregues por e-mail até as
+        22:00 das datas indicadas. Elas devem ser digitadas ou então
+        escritas <u>cuidadosamente</u> à mão (nesse caso, o aluno
+        enviaria fotos de seu trabalho). Um rascunho receberá apenas
+        crédito parcial que será proporcional à minha capacidade de
+        interpretá-lo! Soluções que usem contas feitas pelo computador
+        devem incluir um script em Pyhton (um arquivo *.py) que faça essas
+        contas.
+      </p>
+
+      <p>
+        Soluções atrasadas não serão aceitas. Listas de exercícios serão
+        distribuídas semanalmente, então se você perdeu o prazo para uma,
+        terá chance de compensar com outras. O prazo estando
+        prestes a acabar, é melhor submeter um rascunho com as contas que
+        você tiver do que nada! A intenção desta política de prazos
+        estrita é evitar que listas atrasadas se acumulem e impeçam o aluno
+        de trabalhar em novas.
+      </p>
+    -->
+
+      <ul>
+        <li> <a href="AL-Lista1.pdf">Lista 1</a>: Entregar até terça-feira,
+          dia 6 de setembro.
+        <li> <a href="AL-Lista2.pdf">Lista 2</a>: Entregar até terça-feira,
+          dia 20 de setembro.
+        <li> <a href="AL-Revisao1.pdf">Revisão para prova 1</a>: Não precisa
+          entregar.
+        <li> <a href="AL-Lista3.pdf">Lista 3</a>: Entregar até terça-feira,
+          dia 13 de outubro.
+        <li> <a href="AL-Lista4.pdf">Lista 4</a>: Entregar até terça-feira,
+          dia 25 de outubro.
+        <li> <a href="AL-Lista5.pdf">Lista 5</a>: Entregar até terça-feira,
+          dia 15 de novembro.
+        <li> <a href="AL-Lista6.pdf">Lista 6</a>: Entregar até terça-feira,
+          dia 07 de dezembro.
+        <li> <a href="AL-RevisaoFinal.pdf">Revisão para a prova final</a>: Não precisa entregar
+      </ul>
+
+    </div>
+
+    <!--
+    <div>
+
+      <h2>Python</h2>
+
+      <p>
+        Para instalar a implementação padrão da linguagem de programação
+        Python, clique
+        <a href="https://docs.python.org/3/tutorial/introduction.html">aqui</a>
+        e vá em "Downloads". Ambas a versões 2.7 e 3.5 são de uso corrente,
+        fique à vontade para usar a que você prefeir. Eu usarei a mais
+        recente 3.5.
+      </p>
+
+    </div>
+  -->
+
+
+
+    <div>
+
+      <h2>Recursos computacionais</h2>
+
+      <p>
+        Neste curso usaremos a linguagem de programação Python
+        e os pacotes de computação científica
+        <a href="http://www.numpy.org">NumPy</a> e
+        <a href="https://www.scipy.org">SciPy</a>.
+        Usaremos também o pacote
+        <a href="http://matplotlib.org">Matplotlib</a>
+        para desenhar gráficos. Para interagir
+        com o código usaremos cadernos
+        <a href="https://jupyter.org">Jupyter</a>.
+      </p>
+
+      <p>
+        Para usar estes recursos, o aluno tem duas opções:
+        <ul>
+          <li>
+            <b>Instalar</b> em sua máquina a distribuição científica
+            de Python
+            <a href="https://anaconda.org">
+              Anaconda</a>. Instruções para usuários Windows:
+              <ol>
+                <li>
+                  Baixe Anaconda (versão Python 3)
+                  <a href="https://www.continuum.io/downloads">
+                    neste link</a>.
+                </li>
+
+                <li>
+                  Clique no executável e siga as instruções de instalação.
+                </li>
+
+                <li>
+                  Clique no ícone do Jupyter Notebook no menu Iniciar.
+                  Você verá em seu navegador de internet o conteúdo de uma
+                  pasta em seu computador, provavelmente
+                  "C:\Users\SEU_NOME\Documents".
+                </li>
+
+                <!--
+                  <li>
+                    Crie dentro desta pasta uma outra chamada "Jupyter".
+                    Você pode fazê-lo encontrando a pasta cujo conteúdo você
+                    está vendo no Windows Explorer, ou no próprio Jupyter,
+                    clicando à direita em "New", depois em "Folder". Marque a
+                    caixa à esquerda desta pasta criada, clique em "Rename"
+                    e escreva "Jupyter".
+                  </li>
+                -->
+
+                <li>
+                  Clique em "New" e então
+                  em "Python [Root]", sob "Notebooks".
+                </li>
+
+                <li>
+                  Na caixa à direita de "In [1]:", digite "2 + 2" e aperte
+                  Shift+Enter. Se aparecer 4, você está pronto pra começar!
+                </li>
+              </ol>
+          </li>
+
+          <li>
+            <b>Trabalhar na nuvem</b>, usando o
+            <a href="https://cloud.sagemath.com">Sage Math Cloud</a>.
+            Instruções:
+            <ol>
+              <li>
+                Clique no link e crie uma conta ou conecte uma já existente
+                (do Facebook ou do Google, por exemplo).
+              </li>
+
+              <li>
+                Clique no botão "Create new project...", escolha um título
+                (por exemplo, "Teste"), e clique em "Create project without
+                upgrades".
+              </li>
+
+              <li>
+                Um projeto com o título que você deu deve aparecer.
+                Clique nele e espere a mensagem "Starting..." desaparecer.
+              </li>
+
+              <li>
+                Clique em "New", em cima, à esquerda. Clique na opção
+                "Jupyter Notebook". Espere o site carregar.
+              </li>
+
+              <li>
+                Na caixa à direita de "In [1]:", digite "2 + 2" e aperte
+                Shift+Enter. Se aparecer 4, você está pronto pra começar!
+              </li>
+            </ol>
+          </li>
+        </ul>
+      </p>
+
+    </div>
+
+
+    <div>
+
+      <h2>Links interessantes</h2>
+
+      <ul>
+        <li>
+          <a href="http://ocw.mit.edu/courses/mathematics/18-06-linear-algebra-spring-2010/index.htm">
+          <b>Álgebra linear no MIT.</b></a> Destaque para
+          <a href="http://ocw.mit.edu/courses/mathematics/18-06-linear-algebra-spring-2010/video-lectures/">
+          aulas</a> em vídeo e
+          <a href="http://web.mit.edu/18.06/www/Course-Info/Tcodes.html">
+          implementações</a> pedagógicas em MATLAB de algorítmos
+          de álgebra linear. Traduções para Python de algumas dessas
+          implementações podem ser encontradas abaixo.
+        </li>
+
+        <li>
+          <a href="http://tdc-www.harvard.edu/Python.pdf">
+          Introdução</a> a Python que explica objetos mutáveis
+          e imutáveis, uplas, listas e referências.
+        </li>
+
+        <li>
+          <a href="http://www.math.harvard.edu/archive/21b_fall_04/exhibits/index.html">
+            Exposição</a> de álgebra linear no site do curso dado no
+            Outono de 2004 em Harvard.
+        </li>
+
+        <li>
+          <a href="http://docs.scipy.org/doc/scipy/reference/linalg.html">
+            Documentação</a> do pacote scipy.linalg
+        </li>
+
+        <li>
+          <a href="http://matplotlib.org/users/pyplot_tutorial.html">Tutorial</a>
+          do pacote matplotlib.pyplot
+        </li>
+
+        <li>
+          <a href="https://mail.scipy.org/pipermail/numpy-discussion/2008-November/038705.html">
+            Razão</a> do pacote NumPy não possuir uma função
+          que escalona uma matriz.
+        </li>
+
+        <li>
+          <a href="http://aix1.uottawa.ca/~jkhoury/app.htm">
+            Página</a>
+          de
+          <a href="http://aix1.uottawa.ca/~jkhoury/">Joseph Khoury</a>
+          com aplicações da álgebra linear
+        </li>
+
+        <li>
+          <a href="https://projecteuler.net/archives">Projeto Euler</a>:
+          lista interessante exercícios de que mistura programação e
+          matemática elementar
+        </li>
+
+        <li>
+          <a href="http://www.damtp.cam.ac.uk/user/reh10/lectures/nst-mmii-chapter2.pdf">Notas</a>
+          de <a href="http://www.damtp.cam.ac.uk/user/reh10/">Robert Hunt</a>
+          sobre a equação de Poisson.
+          <a href="https://en.wikipedia.org/wiki/Discrete_Poisson_equation">Artigo</a>
+          da Wikipedia sobre a equação de Poisson discreta.
+        </li>
+      </ul>
+    </div>
+
+    <div>
+
+      <h2>Programa</h2>
+
+      <table id="programa">
+
+        <tr>
+          <th> Dia </th>
+          <th> Tópicos </th>
+          <th> Material complementar </th>
+        </tr>
+
+        <tr>
+          <td> 31/08 </td>
+
+          <td>
+            Geometria de um sistema linear; eliminação Gaussiana;
+            introdução a Python
+          </td>
+
+          <td>
+            Livro, seções 1.2 e 1.3 <br>
+            <a href="http://nbviewer.jupyter.org/url/w3.impa.br/%7Ebraune/Teaching/AL2016-2/python_basico.ipynb">
+              python_basico.ipynb
+            </a><br>
+
+            <a href="fibonacci.py">fibonacci.py</a>
+          </td>
+
+        </tr>
+
+        <tr>
+          <td> 02/09 </td>
+
+          <td>
+            Multiplicação de matrizes; matrizes de eliminação;
+            decomposições LU e LDU
+          </td>
+
+          <td>
+            Livro, seções 1.4 e 1.5
+          </td>
+
+        </tr>
+
+        <tr>
+          <td> 07/09 </td>
+
+          <td>
+            <i>Feriado: Independência do Brasil</i>
+          </td>
+
+          <td>
+          </td>
+
+        </tr>
+
+        <tr>
+          <td> 09/09 </td>
+
+          <td>
+            Trocas de linhas; PA = LU; matrizes inversas; Gauss-Jordan
+          </td>
+
+          <td>
+            Livro, seções 1.5 e 1.6 <br>
+
+            <a href="http://nbviewer.jupyter.org/url/w3.impa.br/%7Ebraune/Teaching/AL2016-2/lu_demo.ipynb">
+              lu_demo.ipynb</a><br>
+
+            <a href="slu.py">slu.py</a><br>
+
+            <a href="splu.py">splu.py</a><br>
+
+            <a href="splv.py">splv.py</a>
+          </td>
+
+
+        </tr>
+
+        <tr>
+          <td> 14/09 </td>
+
+          <td>
+            Matrizes especiais;
+            aplicação às equações diferencias;
+            espaços vetoriais; espaço coluna e espaço nulo
+
+          </td>
+
+          <td>
+            Livro, seções 1.6, 1.7 e 2.1.
+          </td>
+
+        </tr>
+
+        <tr>
+          <td> 16/09 </td>
+
+          <td>
+            Solução completa de Ax = b; PA = LU retangular;
+            posto; independencia linear
+          </td>
+
+          <td>
+            Livro, seções 2.2 e 2.3
+          </td>
+
+        </tr>
+
+        <tr>
+          <td> 21/09 </td>
+
+          <td>
+            Base e dimensão; os quatro subespaços fundamentais
+          </td>
+
+          <td>
+            Livro, seções 2.3 e 2.4
+          </td>
+
+        </tr>
+
+        <tr>
+          <td> 23/09 </td>
+
+          <td>
+            Grafos, matrizes de adjacência, circuitos
+          </td>
+
+          <td>
+            Livro, Seção 2.5
+          </td>
+
+        </tr>
+
+        <tr>
+          <td> 28/09 </td>
+
+          <td>
+            <b>Prova 1</b>
+          </td>
+
+          <td>
+          </td>
+
+        </tr>
+
+        <tr>
+          <td> 30/09 </td>
+
+          <td>
+            Matriz de uma transformação linear
+          </td>
+
+          <td>
+            Livro, seções 2.6 e 3.1. <br>
+
+            <a href="https://nbviewer.jupyter.org/url/w3.impa.br/~braune/Teaching/AL2016-2/transf.ipynb">transf.ipynb</a>
+          </td>
+
+        </tr>
+
+        <tr>
+          <td> 05/10 </td>
+
+          <td>
+            Produto interno, complemento ortogonal;
+            parte 2 do Teorema fundamental
+          </td>
+
+          <td>
+            Livro, seções 3.1 e 3.2.
+          </td>
+
+        </tr>
+
+        <tr>
+          <td> 07/10 </td>
+
+          <td>
+            Projeção em um subespaço. Aproximação com quadrados mínimos.
+          </td>
+
+          <td>
+            Livro, seção 3.3.
+          </td>
+
+        </tr>
+
+        <tr>
+          <td> 12/10 </td>
+
+          <td>
+            <i>Feriado: Nossa Senhora Aparecida</i>
+          </td>
+
+          <td>
+          </td>
+
+        </tr>
+
+        <tr>
+          <td> 14/10 </td>
+
+          <td>
+            Bases e matrizes ortogonais; Gram-Schmidt e fatoração A=QR
+          </td>
+
+          <td>
+            Livro, seção 3.4
+          </td>
+
+        </tr>
+
+        <tr>
+          <td> 19/10 </td>
+
+          <td>
+            <i>Evento: Matemática na Urca</i>
+          </td>
+
+          <td>
+          </td>
+
+        </tr>
+
+        <tr>
+          <td> 21/10 </td>
+
+          <td>
+            <i>Evento: Matemática na Urca</i>
+          </td>
+
+          <td>
+          </td>
+
+        </tr>
+
+        <tr>
+          <td> 26/10 </td>
+
+          <td>
+            Séries de Fourier; audio digital;
+            transformada de Fourier rápida
+          </td>
+
+          <td>
+            Livro, seções 3.4 e 3.5 </br>
+            <a href="https://nbviewer.jupyter.org/url/w3.impa.br/~braune/Teaching/AL2016-2/fourier.ipynb">fourier.ipynb</a>
+          </td>
+
+        </tr>
+
+        <tr>
+          <td> 28/10 </td>
+
+          <td>
+            <i>Feriado: Dia do Servidor Público</i>
+          </td>
+
+          <td>
+          </td>
+
+        </tr>
+
+        <tr>
+          <td> 02/11 </td>
+
+          <td>
+            <i>Feriado: Finados</i>
+          </td>
+
+          <td>
+          </td>
+
+        </tr>
+
+        <tr>
+          <td> 04/11 </td>
+
+          <td>
+            Determinantes: propriedades. Aula de exercícios
+          </td>
+
+          <td>
+            Livro, seção 4.2
+          </td>
+
+        </tr>
+
+        <tr>
+          <td> 09/11 </td>
+
+          <td>
+            Determinantes: fórmulas e aplicações
+          </td>
+
+          <td>
+            Livro, seções 4.3 e 4.4
+          </td>
+
+        </tr>
+
+        <tr>
+          <td> 11/11 </td>
+
+          <td>
+            Autovalores, autovetores e equações diferenciais. Aula
+            de exercícios
+          </td>
+
+          <td>
+            Livro, seção 5.1
+          </td>
+
+        </tr>
+
+        <tr>
+          <td> 16/11 </td>
+
+          <td>
+            <b>Prova 2</b>
+          </td>
+
+          <td>
+          </td>
+
+        </tr>
+
+        <tr>
+          <td> 18/11 </td>
+
+          <td>
+            Diagonalização, equações de diferenças e potências de uma matriz
+          </td>
+
+          <td>
+            Livro, seções 5.2 e 5.3
+          </td>
+
+        </tr>
+
+        <tr>
+          <td> 23/11 </td>
+
+          <td>
+            Matrizes de Markov. <i>Aula interrompida por queda de
+              energia.</i>
+          </td>
+
+          <td>
+            Livro, seções 5.2 e 5.3
+          </td>
+
+        </tr>
+
+        <tr>
+          <td> 25/11 </td>
+
+          <td>
+            Equações diferenciais e exponencial de uma matriz
+          </td>
+
+          <td>
+            Livro, seção 5.4
+          </td>
+
+        </tr>
+
+        <tr>
+          <td> 30/11 </td>
+
+          <td>
+            Matrizes simétricas e Hermiteanas, matrizes semelhantes,
+            forma canônica de Jordan. Exercícios
+          </td>
+
+          <td>
+            Livro, seções 5.5 e 5.6
+          </td>
+
+        </tr>
+
+        <tr>
+          <td> 02/12 </td>
+
+          <td>
+            Matrizes simétricas e positivas definidas. Critérios,
+            máximos e mínimos, elipsóides.
+          </td>
+
+          <td>
+            Livro, seções 6.1 e 6.2
+          </td>
+
+        </tr>
+
+        <tr>
+          <td> 07/12 </td>
+
+          <td>
+            Decomposição dos valores singulares (SVD) e compressão de
+            imagens
+          </td>
+
+          <td>
+            Livro, seção 6.3<br>
+            <a href="https://nbviewer.jupyter.org/url/w3.impa.br/~braune/Teaching/AL2016-2/SVD.ipynb">SVD.ipynb</a>
+          </td>
+
+        </tr>
+
+        <tr>
+          <td> 09/12 </td>
+
+          <td>
+            Cálculo de autovalores na prática: método das potências e
+            decomposição QR
+          </td>
+
+          <td>
+            Livro, seção 7.3<br>
+            <a href="https://nbviewer.jupyter.org/url/w3.impa.br/~braune/Teaching/AL2016-2/QR.ipynb">QR.ipynb</a>
+          </td>
+
+        </tr>
+
+        <tr>
+          <td> 14/12 </td>
+
+          <td>
+            Revisão do curso e exercícios
+          </td>
+
+          <td>
+          </td>
+
+        </tr>
+
+        <tr>
+          <td> 16/12 </td>
+
+          <td>
+            <b>Prova 3</b>
+          </td>
+
+          <td>
+          </td>
+
+        </tr>
+
+        <tr>
+          <td> 21/12 </td>
+
+          <td>
+            <b>Prova Final</b>
+          </td>
+
+          <td>
+          </td>
+
+        </tr>
+
+      </table>
+    </div>
+
+  </body>
+
+</html>

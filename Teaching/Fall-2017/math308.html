@@ -1,0 +1,732 @@
+<!DOCTYPE HTML>
+
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+
+    <title>Math 308 E, F</title>
+
+    <!-- Mathjax: latex rendering -->
+    <script src='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML'></script>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+      tex2jax: { inlineMath: [["$","$"]] }
+      });
+    </script>
+
+    <!-- Set the page to the width of the device and set the zoom level -->
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+    <!-- My styles sheet -->
+    <link rel="stylesheet" href="styles.css"/>
+
+  </head>
+
+  <body>
+
+    <div class="container">
+
+      <h1>Math 308<br>Matrix Algebra with Applications</h1>
+      Autumn 2017
+
+      <hr>
+
+      <h4>Time and Place</h4>
+      <p>
+        The course meets on Mondays, Wednesdays and Fridays.<br>
+        <i>Section E:</i> 10:30-11:20am at
+        <a href="https://www.washington.edu/classroom/DEM">DEM 004</a> <br>
+        <i>Section F:</i> 11:30-12:20pm at
+        <a href="https://www.washington.edu/classroom/THO">THO 119</a>
+      </p>
+
+      <hr>
+
+
+      <h4>Instructor</h4>
+      <p>
+        <i>Name:</i> Lucas Braune <br>
+        <i>Website:</i> <a href="../../index.html">www.math.uw.edu/~lvhb</a> <br>
+        <i>E-mail:</i> lvhb 'at' uw.edu <br>
+        <i>Office:</i> Padelford C-526 <br>
+        <i>Office hours:</i> T-Th, 09:30-11:00am
+      </p>
+
+      <hr>
+
+
+
+      <!--
+        <h4>Announcements</h4>
+        <dl>
+          <dt style="color:tomato">Sep 28 (Update 2)</dt>
+          <dd style="color:tomato">
+            <p>
+              Some students are still having trouble with their access codes.
+              It may be that the solution I aluded to below will take some time
+              before coming into effect. If your code is not working today,
+              please try using it again tomorrow. (And remember to make use of
+              your grace period in the meantime.)
+            </p>
+          </dd>
+
+        <dl>
+          <dt>Sep 28 (Update)</dt>
+          <dd>
+            <p>
+              It seems that the problem with WebAssign has been solved.
+              Please try using your access code again; let me know if you
+              have any trouble. Click
+              <a href="webassign-entry.pdf">here</a> for instructions. Remember
+              to follow them closely!
+            </p>
+          </dd>
+
+          <dt>Sep 28</dt>
+          <dd>
+            <p>
+              Some students have reported that WebAssign is rejecting their access
+              codes. I am currently looking into this issue. For the time being,
+              if you are having it, please click on "I'll do it later" instead of
+              the the red
+              button that reads "Verify Payment" that you see when you log into
+              WebAssign. This way you will be able to view and start working on the
+              homework for this week. (Sorry, no extensions on the
+              date homework is due!) To be safe, I would like to remind you that
+              the code in the slip of paper that you get when you purchase the
+              course text from the University Bookstore is <b>not</b> your WebAssign
+              access code. To obtain your access code, please follow the
+              instructions in the slip of paper. The code should take one of the
+              following two forms:
+              <ul>
+                <li> EXAMPLE-RXL XXXX 9999 X9X9 XX99 </li>
+                <li> PPJWJN2PP6SL5W </li>
+              </ul>
+            </p>
+          </dd>
+
+          <dt>Sep 27</dt>
+          <dd>
+            <p>
+              Welcome to Math 308!
+            </p>
+          </dd>
+
+        </dl>
+      -->
+
+      <h4>Calendar</h4>
+
+      <p>
+      Click <a href="Schedule.pdf">here</a> to see a tentative
+      schedule for the course.
+      </p>
+
+      <table class="table table-striped">
+        <tbody>
+          <tr>
+            <td class="col-lg-2 col-md-2 col-sm-2 col-xs-3">Sep 27</td>
+            <td>
+              Linear systems (row and column pictures). Elimination.
+            </td>
+            <td>
+              <a href="Notes/Math 308 Lecture 1.pdf">Notes</a>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="col-lg-2 col-md-2 col-sm-2 col-xs-3">Sep 29</td>
+            <td>
+              Matrix-vector multiplication.
+              Singular systems. Echelon form.
+            </td>
+            <td>
+              <a href="Notes/Math 308 Lecture 2.pdf">Notes</a>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="col-lg-2 col-md-2 col-sm-2 col-xs-3">Oct 2</td>
+            <td>
+              Nonsingular matrices. Leading and free variables.
+              Chemical reactions.
+            </td>
+            <td>
+              <a href="Notes/Math 308 Lecture 3.pdf">Notes</a>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="col-lg-2 col-md-2 col-sm-2 col-xs-3">Oct 4</td>
+            <td>
+              Computational cost. Poisson's equation. Sparse systems.
+            </td>
+            <td>
+              <a href="Notes/Math 308 Lecture 4.pdf">Notes</a>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="col-lg-2 col-md-2 col-sm-2 col-xs-3">Oct 6</td>
+            <td>
+              Abstract vector spaces. Subspaces.
+            </td>
+            <td>
+              <a href="Notes/Math 308 Lecture 5.pdf">Notes</a>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="col-lg-2 col-md-2 col-sm-2 col-xs-3">Oct 9</td>
+            <td>
+              Column space. Span. Nullspace.
+            </td>
+            <td>
+              <a href="Notes/Math 308 Lecture 6.pdf">Notes</a>
+            </td>
+          </tr>
+
+
+          <tr>
+            <td class="col-lg-2 col-md-2 col-sm-2 col-xs-3">Oct 11</td>
+            <td>
+              Review: computation of N(A) and of particular solutions to Ax=b.
+            </td>
+            <td>
+              <a href="Notes/Math 308 Lecture 7.pdf">Notes</a>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="col-lg-2 col-md-2 col-sm-2 col-xs-3">Oct 13</td>
+            <td>
+              Linear independence. Review of span and nonsingular matrices.
+            </td>
+            <td>
+              <a href="Notes/Math 308 Lecture 8.pdf">Notes</a>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="col-lg-2 col-md-2 col-sm-2 col-xs-3">Oct 16</td>
+            <td>
+              Problems from an old Midterm exam.
+            </td>
+            <td>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="col-lg-2 col-md-2 col-sm-2 col-xs-3">Oct 18</td>
+            <td>
+              <b>Midterm 1</b>
+            </td>
+            <td>
+              <!--<a href="Exams/Midterm 1 key.pdf">Solutions</a>-->
+            </td>
+          </tr>
+
+
+          <tr>
+            <td class="col-lg-2 col-md-2 col-sm-2 col-xs-3">Oct 20</td>
+            <td>
+              Linear transformations.
+            </td>
+            <td>
+              <a href="Notes/Math 308 Lecture 9.pdf">Notes</a>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="col-lg-2 col-md-2 col-sm-2 col-xs-3">Oct 23</td>
+            <td>
+              The matrix of a linear transformation. One-to-one and onto.
+            </td>
+            <td>
+              <a href="Notes/Math 308 Lecture 10.pdf">Notes</a>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="col-lg-2 col-md-2 col-sm-2 col-xs-3">Oct 25</td>
+            <td>
+              Composition and matrix multiplication.
+            </td>
+            <td>
+              <a href="Notes/Math 308 Lecture 11.pdf">Notes</a>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="col-lg-2 col-md-2 col-sm-2 col-xs-3">Oct 27</td>
+            <td>
+              The matrix inverse.
+            </td>
+            <td>
+              <a href="Notes/Math 308 Lecture 12.pdf">Notes</a>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="col-lg-2 col-md-2 col-sm-2 col-xs-3">Oct 30</td>
+            <td>
+              Inverse via Gauss-Jordan. LU decomposition.
+            </td>
+            <td>
+              <a href="Notes/Math 308 Lecture 13.pdf">Notes</a>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="col-lg-2 col-md-2 col-sm-2 col-xs-3">Nov 1</td>
+            <td>
+              Inverse of a linear transformation. Basis and dimension.
+            </td>
+            <td>
+              <a href="Notes/Math 308 Lecture 14.pdf">Notes</a>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="col-lg-2 col-md-2 col-sm-2 col-xs-3">Nov 3</td>
+            <td>
+              Bases for row(A), col(A) and null(A).
+            </td>
+            <td>
+              <a href="Notes/Math 308 Lecture 15.pdf">Notes</a>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="col-lg-2 col-md-2 col-sm-2 col-xs-3">Nov 6</td>
+            <td>
+              Determinants: properties.
+            </td>
+            <td>
+              <a href="Notes/Math 308 Lecture 16.pdf">Notes</a>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="col-lg-2 col-md-2 col-sm-2 col-xs-3">Nov 8</td>
+            <td>
+              Determinants: the big formula, cofactor expansions.
+            </td>
+            <td>
+              <a href="Notes/Math 308 Lecture 17.pdf">Notes</a>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="col-lg-2 col-md-2 col-sm-2 col-xs-3">Nov 10</td>
+            <td>
+              <i>No class: Veteran's day (observed)</i>
+            </td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td class="col-lg-2 col-md-2 col-sm-2 col-xs-3">Nov 13</td>
+            <td>
+              Review
+            </td>
+            <td>
+              <a href="Notes/Math 308 Lecture 18.pdf">Notes</a>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="col-lg-2 col-md-2 col-sm-2 col-xs-3">Nov 15</td>
+            <td>
+              <b>Midterm 2</b>
+            </td>
+            <td>
+              <!--<a href="Exams/Midterm 2 key.pdf">Solutions</a>-->
+            </td>
+          </tr>
+
+          <tr>
+            <td class="col-lg-2 col-md-2 col-sm-2 col-xs-3">Nov 17</td>
+            <td>
+              Eigenvalues, eigenvectors. Characteristic polynomial. Trace.
+            </td>
+            <td>
+              <a href="Notes/Math 308 Lecture 19.pdf">Notes</a>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="col-lg-2 col-md-2 col-sm-2 col-xs-3">Nov 20</td>
+            <td>
+              Diagonalization. Powers of a matrix. Fibonacci sequence.
+            </td>
+            <td>
+              <a href="Notes/Math 308 Lecture 20.pdf">Notes</a>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="col-lg-2 col-md-2 col-sm-2 col-xs-3">Nov 22</td>
+            <td>
+              Systems of ODEs. Markov matrices. Steady states.
+            </td>
+            <td>
+              <a href="Notes/Math 308 Lecture 21.pdf">Notes</a>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="col-lg-2 col-md-2 col-sm-2 col-xs-3">Nov 24</td>
+            <td>
+              <i>No class: Thanksgiving Friday</i>
+            </td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td class="col-lg-2 col-md-2 col-sm-2 col-xs-3">Nov 27</td>
+            <td>
+              Transposes. Orthogonal vectors and subspaces.
+            </td>
+            <td>
+              <a href="Notes/Math 308 Lecture 22.pdf">Notes</a>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="col-lg-2 col-md-2 col-sm-2 col-xs-3">Nov 29</td>
+            <td>
+              Projections. Least squares.
+            </td>
+            <td>
+              <a href="Notes/Math 308 Lecture 23.pdf">Notes</a>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="col-lg-2 col-md-2 col-sm-2 col-xs-3">Dec 1</td>
+            <td>
+              Least squares. Fitting a line to data points.
+            </td>
+            <td>
+              <a href="Notes/Math 308 Lecture 24.pdf">Notes</a>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="col-lg-2 col-md-2 col-sm-2 col-xs-3">Dec 4</td>
+            <td>
+              Orthonormal bases. Orthogonal matrices. Gram-Schmidt.
+            </td>
+            <td>
+              <a href="Notes/Math 308 Lecture 25.pdf">Notes</a>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="col-lg-2 col-md-2 col-sm-2 col-xs-3">Dec 6</td>
+            <td>
+              QR decomposition. Eigenvalue computations. Fourier series.
+            </td>
+            <td>
+              <a href="Notes/Math 308 Lecture 26.pdf">Notes</a>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="col-lg-2 col-md-2 col-sm-2 col-xs-3">Dec 8</td>
+            <td>
+              Course review.
+            </td>
+            <td>
+              <a href="Notes/Math 308 Lecture 27.pdf">Notes</a>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="col-lg-2 col-md-2 col-sm-2 col-xs-3">Dec 11</td>
+            <td>
+              <b>Final exam (section E)</b>
+            </td>
+            <td>
+              <!--<a href="Exams/Final E.pdf">Solutions</a>-->
+            </td>
+          </tr>
+
+          <tr>
+            <td class="col-lg-2 col-md-2 col-sm-2 col-xs-3">Dec 13</td>
+            <td>
+              <b>Final exam (section F)</b>
+            </td>
+            <td>
+              <!--<a href="Exams/Final F.pdf">Solutions</a>-->
+            </td>
+          </tr>
+
+
+        </tbody>
+      </table>
+
+      <hr>
+
+
+      <h4>Textbook</h4>
+
+      <p>
+        The textbook for Math 308 is <i>Linear Algebra
+        with Applications</i> (second edition, with Webassign) by Jeffrey Holt.
+        A loose-leaf version of the book is available at the University Bookstore.
+        Alternatively, it is possible to buy digital access to the book through
+        Webassign.
+      </p>
+
+      <hr>
+
+      <h4>Homework</h4>
+
+      <p>
+        Homework for this class will be submitted through
+        <a href="https://www.webassign.net/washington/login.html?WebAssignUsername=&WebAssignInstitution=washington">Webassign</a>.
+        Click
+        <a href="https://sites.math.washington.edu/~taggart/m308/UWCommon/howtowebassign.html">here</a>
+        for information on Webassign put together for students by Jennifer
+        Taggart.
+      </p>
+
+      <p>
+        The student that wishes practice for the exams may wish to look the
+        <a href="https://sites.math.washington.edu/~kdev/teaching/308exams/">Math 308 Exam Archive</a>
+        compiled by Kristin DeVleming. They are advised to bear in mind that
+        exams from previous incarnations of Math 308 may concern material different
+        from what we discuss in the present course.
+      </p>
+
+      <hr>
+
+      <h4>Grading</h4>
+
+      <table class="table table-striped">
+        <tbody>
+          <tr>
+            <td>Homework</td>
+            <td>20%</td>
+          </tr>
+          <tr>
+            <td>Midterm 1</td>
+            <td>20%</td>
+          </tr>
+          <tr>
+            <td>Midterm 2</td>
+            <td>20%</td>
+          </tr>
+          <tr>
+            <td>Final Exam</td>
+            <td>40%</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>
+        The dates of the final exams are set by the university and cannot
+        be changed.
+        The final exam for section E will take place
+        from 8:30 to 10:30am on Monday, December 11, at
+        <a href="https://www.washington.edu/classroom/DEM">DEM 004</a>.
+        The final exam for section F will take place
+        from 2:30 to 4:30pm on Wednesday, December 13, at
+        <a href="https://www.washington.edu/classroom/DEM">THO 119</a>.
+      </p>
+
+
+      <!--
+      <p>
+        <b>Update</b> (December 29)<b>:</b><br>
+
+        Students may now see their course grades on
+        <a href="https://catalyst.uw.edu/">Catalyst</a>.
+        <b>Grade distributions</b> are available
+        <a href="Grades/distributions.html">here</a>.
+        What follows is information on how grades were computed.
+      </p>
+
+      <ul>
+        <li>
+          The <b>total score</b> (or <i>raw score</i>) is the percentage of all points
+          available, weighted as indicated in the table above, that were earned
+          by the student. Let $W, M_1, M_2$ and $F$ denote the grades obtained
+          by a student in their homework, first midterm, second midterm and
+          final exam, respectively. For a student in Section E,
+          $$
+          \text{Total Score} = 0.2 (W/404) + 0.2 (M_1/32) + 0.2 (M_2/50) + 0.4 (F/80),
+          $$
+          whereas for a student in Section F,
+          $$
+          \text{Total Score} = 0.2 (W/404) + 0.2 (M_1/32) + 0.2 (M_2/50) + 0.4 (F/70).
+          $$
+        </li>
+        <li>
+          The <b>course grade</b>, a number between 0.0 and 4.0, is a
+          piecewise-linear function of the raw score.
+
+          For a student in <b>section E</b>,
+          the course grade increases linearly from 0.0 to 2.0 as the raw score
+          increases from 0 to 60; increases linearly from 2.0 to 4.0 as the
+          raw score increases from 60 to 84; and stays constant and equal to 4.0
+          for higher raw scores.
+
+          For a student in <b>section F</b>,
+          the course grade increases linearly from 0.0 to 2.0 as the raw score
+          increases from 0 to 62; increases linearly from 2.0 to 4.0 as the
+          raw score increases from 62 to 92; and stays constant and equal to 4.0
+          for higher raw scores.
+
+          In both sections, course grades below 2.0 were individually
+          reviewed. In particular, grades of 1.9 were upgraded to 2.0.
+        </li>
+      </ul>
+
+      <p>
+        This grading scheme is based on the following principles:
+        <ol>
+          <li>
+            Grading should fair and treat all students equally.
+          </li>
+          <li>
+            The translation of raw scores into course
+            grades should be as direct as possible.
+          </li>
+          <li>
+            A grade of 4.0 should be awarded to students who demonstrate a
+            high degree of competence in the suject of the course.
+          </li>
+          <li>
+            A grade of 2.0 should reflect a proficiency in linear algebra that
+            is sufficient for the study of other courses in the
+            UW that have Math 308 as a prerequisite.
+          </li>
+          <li>
+            Grade inflation should be avoided. The
+            <a href="https://en.wikipedia.org/wiki/Median">median</a>
+            grade should be between 2.8 and 3.1.
+          </li>
+          <li>
+            There should be statistical consistency in the grade distributions
+            across different versions of Math 308, and across different
+            courses in the Department of Mathematics.
+          </li>
+        </ol>
+      </p>
+
+      <p>
+        Students were assigned grades below 2.0 only after careful
+        consideration. <u>All decisions in this regard are final</u>, barring
+        a revision of the grade of a student's final exam.
+      </p>
+
+      <p>
+        Students may <b>pick up their final exams</b> in my office starting from
+        January 3rd. Please write me an e-mail to make an appointment before
+        you come.
+      </p>
+
+      -->
+
+      <hr>
+
+
+      <h4>Course description</h4>
+
+      <p>
+      Math 308 is a course on Linear Algebra. At its core, Linear Algebra
+      is about solving systems of linear equations. We will begin by discussing
+      Gaussian elimination, a method that can be used to solve
+      any such system, and also one of the most important
+      algorithms of pure and applied mathematics.</p>
+
+      <p>
+      We will interpret a linear system as a single equation
+      $Ax = b$, where $x$ is an unknown vector which, multiplied by a matrix
+      $A$, yields a given vector $b$. This will lead us to the rules of
+      multiplying matrices, and to the notion of a matrix inverse. When the
+      inverse $A^{-1}$ of a matrix $A$ exists, the system $Ax=b$ is easy to
+      solve: $x=A^{-1}b$!</p>
+
+      <p>
+      In tandem with the algebra of matrices, we will study
+      their geometry: how do vectors (or planes) move when you multiply them by
+      a matrix? This point of view will lead us to the notion of a linear
+      transformation, which much illuminates matrix multiplication.
+      In carrying out this discussion, we will introduce ourselves
+      to the geometric notions of linear independence, span and dimension of
+      a linear subspace of $\mathbb R^n$.</p>
+
+      <p>
+      Next, we will dispel the mystery of determinants. Geometrically,
+      determinants measure volumes. Alternatively, they can be seen as a
+      gadget that takes $n$ size-$n$ vectors and outputs a number. This gadget
+      can be completely understood in terms of three easy-to-remeber rules
+      of algebra.
+      </p>
+
+      <p>
+      Using determinants, we will introduce eigenvalues and eigenvectors.
+      In a certain sense, these are numbers and vectors allow us to
+      completely understand any matrix. This point which will be illustrated by
+      applications to recursion problems and systems of ODEs.
+      </p>
+
+      <p>
+      To conclude the course, we will discuss lengths and angles. It will be
+      clear that, without much creativity, one can make sense of these notions
+      in dimensions 4 and higher. This will open way to interesting applications.
+      Time permitting, we will discuss least squares regression, a technique
+      that will alow us to answer the question: "What is the line that best
+      approximates 30 given data points?".</p>
+
+      <p>
+      (Another landmark application of
+      the notion of orthogonality is Fourier analysis. This is
+      used for example in MP3 compression to discard from an audio signal its
+      components in frequencies that cannot be heard by the human ear.
+      Interested students can talk to me if they want to learn more about this
+      or other applications of linear algebra that we are [unfortunately] unable
+      to cover during lectures. A summary of what the student finds can be
+      worth extra points for them!)
+      </p>
+
+      <p>
+      Intersperced with the development of the theory sketched above,
+      lectures will include as many of the following applications as time
+      permits: numerical solution of the Laplace equation (heat distribution),
+      Markov chains (population dynamics and stock markets), and graphs and
+      networks (circuits, supply chains).
+      <br><br>
+      </p>
+
+      <hr>
+
+
+
+
+
+      <!--
+
+        <div class="row">
+
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-10">
+            Test 1
+          </div>
+
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-10">
+            Test 2
+          </div>
+
+        </div>
+
+      -->
+
+    </body>
+
+  </html>

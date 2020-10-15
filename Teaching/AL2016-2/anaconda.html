@@ -1,0 +1,641 @@
+<!DOCTYPE HTML>
+
+<html lang="pt-br">
+
+  <head>
+    <meta charset="utf-8">
+
+    <title>Instalação Anaconda</title>
+
+    <style>
+      table#programa {
+        border-collapse: collapse;
+        /* width: 500px; */
+      }
+
+      table#programa td, table#programa th {
+        border: 1px solid #7080A1;
+        text-align: left;
+        padding: 8px;
+      }
+
+      table#programa th {
+        background-color: #7080A1;
+      }
+
+      table#programa tr {
+        background-color: #dddddd;
+      }
+
+      /*
+      table#programa tr:nth-child(even) {
+        background-color: #ccccd8;
+      }
+      */
+
+
+    </style>
+
+  </head>
+
+  <body bgcolor="#B4C4DE">
+
+    <table style="width:100%">
+      <tr>
+        <td valign="top">
+
+
+
+
+          <div>
+
+            <h1>Álgebra Linear 2</h1>
+
+            <p>
+              <b>Onde e quando:</b> Quartas e sextas, das 18h às 20h, na
+              sala 205 N do
+              <a href="http://www3.uniriotec.br/UNIRIO-CCET/">CCET</a><br>
+              <b>Começo das aulas:</b> Quarta-feira, dia 31/08/2016 <br>
+              <b>Professor:</b> <a href="../../index.html">Lucas Braune</a>
+            </p>
+
+          </div>
+
+
+
+
+
+          <div>
+
+            <h2>Bibliografia</h2>
+            <p>
+
+              O livro-texto para o curso é:
+              <ul>
+                <li> Gilbert Strang, <i>Álgebra Linear e suas Aplicações</i>, tradução
+                  da quarta edição norte-americana.
+              </ul>
+              É recomendado ao aluno adquirir uma cópia. Ele está disponível
+              <a href="https://www.amazon.com.br/Álgebra-Linear-Aplicações-Gilbert-Strang/dp/8522107440">na Amazon</a>.
+              <br>
+
+            </p>
+
+          </div>
+
+
+
+
+          <div>
+
+            <h2>Avaliação</h2>
+            <p>
+              A avaliação do curso será através de listas de exercícios semanais
+              (25% da nota final) e três provas (75% da nota final). Além disso, o
+              aluno terá a opção de fazer uma prova final para substituir a menor
+              de suas três notas em prova.
+            </p>
+
+          </div>
+
+
+          <div>
+
+            <h2>Plano do curso</h2>
+
+            <p>
+              <ul>
+                <li> Prova 1: capítulos 1 e 2 do livro (revisão). 6 aulas.
+                <li> Prova 2: capítulos 3, 4 e 5 do livro. 10 aulas.
+                <li> Prova 3: capítulos 6, 7 e 8 do livro. 10 aulas.
+              </ul>
+            </p>
+
+          </div>
+
+
+
+
+
+
+          <div>
+
+            <h2>Listas de exercícios</h2>
+
+            <!--
+            <p>
+              O principal objetivo das listas de exercícios é ajudar o
+              aluno a praticar o que ele aprender na aula. Minha intenção
+              é que nenhum exercício seja muito difícil, mas admito que
+              em conjunto eles possam dar algum trabalho.
+            </p>
+
+            <p>
+              As soluções das listas devem ser entregues por e-mail até as
+              22:00 das datas indicadas. Elas devem ser digitadas ou então
+              escritas <u>cuidadosamente</u> à mão (nesse caso, o aluno
+              enviaria fotos de seu trabalho). Um rascunho receberá apenas
+              crédito parcial que será proporcional à minha capacidade de
+              interpretá-lo! Soluções que usem contas feitas pelo computador
+              devem incluir um script em Pyhton (um arquivo *.py) que faça essas
+              contas.
+            </p>
+
+            <p>
+              Soluções atrasadas não serão aceitas. Listas de exercícios serão
+              distribuídas semanalmente, então se você perdeu o prazo para uma,
+              terá chance de compensar com outras. O prazo estando
+              prestes a acabar, é melhor submeter um rascunho com as contas que
+              você tiver do que nada! A intenção desta política de prazos
+              estrita é evitar que listas atrasadas se acumulem e impeçam o aluno
+              de trabalhar em novas.
+            </p>
+          -->
+
+            <ul>
+              <li> <a href="AL-Lista1.pdf">Lista 1</a>: Entregar até terça-feira,
+                dia 6 de setembro.
+            </ul>
+
+          </div>
+
+          <!--
+          <div>
+
+            <h2>Python</h2>
+
+            <p>
+              Para instalar a implementação padrão da linguagem de programação
+              Python, clique
+              <a href="https://docs.python.org/3/tutorial/introduction.html">aqui</a>
+              e vá em "Downloads". Ambas a versões 2.7 e 3.5 são de uso corrente,
+              fique à vontade para usar a que você prefeir. Eu usarei a mais
+              recente 3.5.
+            </p>
+
+          </div>
+        -->
+
+        <div>
+
+          <h2>Recursos computacionais</h2>
+
+          <p>
+            Neste curso usaremos a linguagem de programação Python
+            e os pacotes de computação científica
+            <a href="http://www.numpy.org">NumPy</a> e
+            <a href="https://www.scipy.org">SciPy</a>.
+            Usaremos também o pacote
+            <a href="http://matplotlib.org">Matplotlib</a>
+            para desenhar gráficos. Para interagir
+            com código usaremos cadernos
+            <a href="https://jupyter.org">Jupyter</a>.
+          </p>
+
+          <p>
+            Para usar estes recursos, o aluno tem duas opções:
+            <ul>
+              <li>
+                <b>Instalar</b> em sua máquina a distribuição científica
+                de Python
+                <a href="https://www.continuum.io/downloads">
+                  Anaconda</a>. Instruções:
+                  <ol>
+                    <li>
+                      Baixe Anaconda (versão Python 3)
+                      indo ao site <a href="https://www.continuum.io/downloads">
+                        Anaconda</a>.
+                    </li>
+                  </ol>
+              </li>
+
+              <li>
+                <b>Trabalhar na nuvem</b>, usando o
+                <a href="https://cloud.sagemath.com">Sage Math Cloud</a>.
+              </li>
+            </ul>
+          </p>
+
+          <p>
+            Links úteis:
+            <ul>
+              <li>
+                <a href="http://docs.scipy.org/doc/scipy/reference/linalg.html">
+                  Referência</a> das funções no pacote scipy.linalg
+              </li>
+
+              <li>
+                <a href="https://mail.scipy.org/pipermail/numpy-discussion/2008-November/038705.html">
+                  Razão</a> do pacote NumPy não possuir uma função
+                que escalona uma matriz.
+              </li>
+            </ul>
+          </p>
+
+
+
+
+          <a href="http://nbviewer.jupyter.org/url/w3.impa.br/%7Ebraune/Untitled.ipynb">Notebook</a>
+
+
+        </div>
+
+        <div>
+
+          <h2>Programa</h2>
+
+          <table id="programa">
+
+            <tr>
+              <th> Dia </th>
+              <th> Tópicos </th>
+              <th> Material complementar </th>
+            </tr>
+
+            <tr>
+              <td> 31/08 </td>
+
+              <td>
+                Geometria das equações lineares; eliminação Gaussiana;
+                introdução a Python
+              </td>
+
+              <td>
+                Livro, seções 1.2 e 1.3
+              </td>
+
+            </tr>
+
+            <tr>
+              <td> 02/09 </td>
+
+              <td>
+                Multiplicação de matrizes; matrizes de eliminação e de
+                permutação; decomposições LU e LDU
+              </td>
+
+              <td>
+                Livro, seções 1.4 e 1.5
+              </td>
+
+            </tr>
+
+            <tr>
+              <td> 07/09 </td>
+
+              <td>
+                <i>Feriado: Independência do Brasil</i>
+              </td>
+
+              <td>
+              </td>
+
+            </tr>
+
+            <tr>
+              <td> 09/09 </td>
+
+              <td>
+              </td>
+
+              <td>
+              </td>
+
+
+            </tr>
+
+            <tr>
+              <td> 14/09 </td>
+
+              <td>
+              </td>
+
+              <td>
+              </td>
+
+            </tr>
+
+            <tr>
+              <td> 16/09 </td>
+
+              <td>
+              </td>
+
+              <td>
+              </td>
+
+            </tr>
+
+            <tr>
+              <td> 21/09 </td>
+
+              <td>
+              </td>
+
+              <td>
+              </td>
+
+            </tr>
+
+            <tr>
+              <td> 23/09 </td>
+
+              <td>
+                <b>Prova 1</b>
+              </td>
+
+              <td>
+              </td>
+
+            </tr>
+
+            <tr>
+              <td> 28/09 </td>
+
+              <td>
+              </td>
+
+              <td>
+              </td>
+
+            </tr>
+
+            <tr>
+              <td> 30/09 </td>
+
+              <td>
+              </td>
+
+              <td>
+              </td>
+
+            </tr>
+
+            <tr>
+              <td> 05/10 </td>
+
+              <td>
+              </td>
+
+              <td>
+              </td>
+
+            </tr>
+
+            <tr>
+              <td> 07/10 </td>
+
+              <td>
+              </td>
+
+              <td>
+              </td>
+
+            </tr>
+
+            <tr>
+              <td> 12/10 </td>
+
+              <td>
+                <i>Feriado: Nossa Senhora Aparecida</i>
+              </td>
+
+              <td>
+              </td>
+
+            </tr>
+
+            <tr>
+              <td> 14/10 </td>
+
+              <td>
+              </td>
+
+              <td>
+              </td>
+
+            </tr>
+
+            <tr>
+              <td> 19/10 </td>
+
+              <td>
+              </td>
+
+              <td>
+              </td>
+
+            </tr>
+
+            <tr>
+              <td> 21/10 </td>
+
+              <td>
+              </td>
+
+              <td>
+              </td>
+
+            </tr>
+
+            <tr>
+              <td> 26/10 </td>
+
+              <td>
+              </td>
+
+              <td>
+              </td>
+
+            </tr>
+
+            <tr>
+              <td> 28/10 </td>
+
+              <td>
+              </td>
+
+              <td>
+              </td>
+
+            </tr>
+
+            <tr>
+              <td> 02/11 </td>
+
+              <td>
+                <i>Feriado: Finados</i>
+              </td>
+
+              <td>
+              </td>
+
+            </tr>
+
+            <tr>
+              <td> 04/11 </td>
+
+              <td>
+              </td>
+
+              <td>
+              </td>
+
+            </tr>
+
+            <tr>
+              <td> 09/11 </td>
+
+              <td>
+                <b>Prova 2</b>
+              </td>
+
+              <td>
+              </td>
+
+            </tr>
+
+            <tr>
+              <td> 11/11 </td>
+
+              <td>
+              </td>
+
+              <td>
+              </td>
+
+            </tr>
+
+            <tr>
+              <td> 16/11 </td>
+
+              <td>
+              </td>
+
+              <td>
+              </td>
+
+            </tr>
+
+            <tr>
+              <td> 18/11 </td>
+
+              <td>
+              </td>
+
+              <td>
+              </td>
+
+            </tr>
+
+            <tr>
+              <td> 23/11 </td>
+
+              <td>
+              </td>
+
+              <td>
+              </td>
+
+            </tr>
+
+            <tr>
+              <td> 25/11 </td>
+
+              <td>
+              </td>
+
+              <td>
+              </td>
+
+            </tr>
+
+            <tr>
+              <td> 30/11 </td>
+
+              <td>
+              </td>
+
+              <td>
+              </td>
+
+            </tr>
+
+            <tr>
+              <td> 02/12 </td>
+
+              <td>
+              </td>
+
+              <td>
+              </td>
+
+            </tr>
+
+            <tr>
+              <td> 07/12 </td>
+
+              <td>
+              </td>
+
+              <td>
+              </td>
+
+            </tr>
+
+            <tr>
+              <td> 09/12 </td>
+
+              <td>
+              </td>
+
+              <td>
+              </td>
+
+            </tr>
+
+            <tr>
+              <td> 14/12 </td>
+
+              <td>
+              </td>
+
+              <td>
+              </td>
+
+            </tr>
+
+            <tr>
+              <td> 16/12 </td>
+
+              <td>
+                <b>Prova 3</b>
+              </td>
+
+              <td>
+              </td>
+
+            </tr>
+
+          </table>
+        </div>
+
+
+
+        </td>
+        <td align="right" valign="top">
+          <img src="logo_unirio.jpg" alt="Logo UNIRIO" width="100"> <br>
+          <br><br>
+          <img src="Strang.jpg" width="250" alt="Álgebra Linear e suas Aplicações"><br>
+        </td>
+      </tr>
+    </table>
+
+
+
+
+
+
+  </body>
+
+</html>

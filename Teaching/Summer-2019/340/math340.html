@@ -1,0 +1,416 @@
+<!DOCTYPE HTML>
+
+<html lang="en">
+
+  <head>
+    <title>Math 340</title>
+    <meta charset="utf-8">
+
+    <!-- Set the page to the width of the device and set the zoom level -->
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  </head>
+
+  <body>
+
+    <div class="container">
+
+
+      <h1>Math 340<br>Abstract Linear Algebra</h1>
+      University of Washington, Summer 2019
+      <hr>
+
+
+      <h4>Instructor</h4>
+
+      <p>
+        <i>Name:</i> Lucas Braune <br>
+        <i>Website:</i> <a href="../../../index.html">http://math.uw.edu/~lvhb</a> <br>
+        <i>E-mail:</i> lvhb 'at' uw.edu <br>
+        <i>Office:</i> Padelford Hall C-526
+      </p>
+
+      <hr>
+
+      <h4>Office hours</h4>
+
+      <p>
+         Mondays and Thursdays, from 4:00 to 5:00 p.m. <br>
+         Students taking Math 427 have preference from 4:00 to 4:30 p.m. <br>
+         Students taking Math 340 have preference from 4:30 to 5:00 p.m.
+      </p>
+
+      <hr>
+
+      <h4>Time and place</h4>
+
+      Lectures meet on Mondays, Wednesdays and Fridays from 1:10 to 2:20 p.m.<br>
+      The classroom is Guggenheim Hall, Room 204
+      (<a href="http://www.washington.edu/classroom/GUG+204">GUG 204</a>).
+
+      <hr>
+
+
+      <h4>Textbook</h4>
+
+      <p>
+        The course textbook is <i>Linear Algebra Done Right</i>, Third Edition,
+        by Sheldon Axler.
+        Homework and readings will be freely assigned from the textbook.
+        UW students may download an electronic version of it from the
+        UW Libraries' <a href="https://www.lib.washington.edu/">website</a>.
+        Physical copies are available from the
+        <a href="https://www.ubookstore.com/Linear-Algebra-Done-Right">University Bookstore</a>
+        and
+        <a href="https://www.amazon.com/Linear-Algebra-Right-Undergraduate-Mathematics-dp-3319110799/dp/3319110799/ref=mt_hardcover?_encoding=UTF8&me=&qid=">Amazon</a>.
+      </p>
+
+      <hr>
+
+
+      <h4>Lecture notes and Homework</h4>
+
+      <p>
+        Click
+        <a href="Math 340 Notes.pdf">here</a>
+        to download the lecture notes for this course.
+        Click
+        <a href="Homework-340.pdf">here</a>
+        to download the homework for this course.
+      </p>
+
+      <hr>
+
+
+
+
+      <h4>Calendar</h4>
+
+      <table class="table table-striped">
+        <tbody>
+
+          <tr>
+            <th>Day</th>
+            <th>Topics</th>
+          </tr>
+
+
+          <tr>
+            <td>Jun 24</td>
+            <td>
+              &sect;1.A-B: Complex numbers, vector spaces
+            </td>
+          </tr>
+
+          <tr>
+            <td>Jun 26</td>
+            <td>
+             &sect;1.C: Subspaces, sum and direct sum of subspaces
+            </td>
+          </tr>
+
+          <tr>
+            <td>Jun 28</td>
+            <td>
+              &sect;2.A: Span and linear independence
+            </td>
+          </tr>
+
+          <tr>
+            <td>Jul 1</td>
+            <td>
+              &sect;2.A-B: Span and linear independence
+            </td>
+          </tr>
+
+          <tr>
+            <td>Jul 3</td>
+            <td>
+              &sect;2.B: Bases
+            </td>
+          </tr>
+
+          <tr>
+            <td>Jul 5</td>
+            <td>
+              &sect;2.C, 3.A: Dimension, linear maps
+            </td>
+          </tr>
+
+
+          <tr>
+            <td>Jul 8</td>
+            <td>
+                &sect;3.A-B: Linear maps; null space and range
+            </td>
+          </tr>
+
+
+
+          <tr>
+            <td>Jul 10</td>
+            <td>
+              &sect;3.B-C: Null space and range; Gaussian elimination
+            </td>
+          </tr>
+
+
+
+          <tr>
+            <td>Jul 12</td>
+            <td>
+              &sect;3.C: Elimination, the matrix of a linear map
+            </td>
+          </tr>
+
+          <tr>
+            <td>Jul 15</td>
+            <td>
+              &sect;3.D: Isomorphisms
+            </td>
+          </tr>
+
+          <tr>
+            <td>Jul 17</td>
+            <td>
+              &sect;3.D,F: Spaces of linear maps, duality
+            </td>
+          </tr>
+
+          <tr>
+            <td>Jul 19</td>
+            <td>
+              &sect;3.F: Matrix and rank of the dual of a linear map
+            </td>
+          </tr>
+
+
+
+          <tr>
+            <td>July 22</td>
+            <td>
+              <b>Midterm Exam</b>
+              <!--(<a href="Exams/324S18 Final.pdf">Solutions</a>)-->
+            </td>
+          </tr>
+
+
+          <tr>
+            <td>Jul 24</td>
+            <td>
+              &sect;3.E, &sect;4: Products of vector sapces; polynomials
+            </td>
+          </tr>
+
+          <tr>
+            <td>Jul 26</td>
+            <td>
+              &sect;4, &sect;5.A-B: Polynomials; eigenvalues and eigenvectors
+            </td>
+          </tr>
+
+          <tr>
+            <td>Jul 29</td>
+            <td>
+              &sect;5.B,D: Existence of eigenvalues, diagonalizable operators
+            </td>
+          </tr>
+
+
+          <tr>
+            <td>Jul 31</td>
+            <td>
+              &sect;5.B: Upper triangular matrices
+            </td>
+          </tr>
+
+
+          <tr>
+            <td>Aug 2</td>
+            <td>
+              &sect;6.A, B: Inner product spaces
+            </td>
+          </tr>
+
+          <tr>
+            <td>Aug 5</td>
+            <td>
+              &sect;6.B,C: Cauchy-Schwarz, orthogonal bases
+            </td>
+          </tr>
+
+          <tr>
+            <td>Aug 7</td>
+            <td>
+              &sect;6.B: Gram-Schmidt; Schur' and Riesz's theorems
+            </td>
+          </tr>
+
+          <tr>
+            <td>Aug 9</td>
+            <td>
+              &sect;6.C: Orthogonal complements and projections
+            </td>
+          </tr>
+
+          <tr>
+            <td>Aug 12</td>
+            <td>
+              &sect;7.A, C: The adjoint of an operator, isometries
+            </td>
+          </tr>
+
+          <tr>
+            <td>Aug 14</td>
+            <td>
+              &sect;7.A,B: Normal operators, the Spectral Theorem
+            </td>
+          </tr>
+
+          <tr>
+            <td>Aug 16</td>
+            <td>
+              &sect;7.C: Positive operators
+            </td>
+          </tr>
+
+          <tr>
+            <td>Aug 19</td>
+            <td>
+              &sect;7.D: Polar and singular value decompositions
+            </td>
+          </tr>
+
+          <tr>
+            <td>Aug 21</td>
+            <td>
+              &sect;7.D, &sect;8: Image compression demo
+              (<a href="https://nbviewer.jupyter.org/url/sites.math.washington.edu/~lvhb/Teaching/Summer-2019/340/SVD.ipynb">SVD.ipynb</a>),
+              Jordan canonical form
+            </td>
+          </tr>
+
+
+          <tr>
+            <td>Aug 23</td>
+            <td>
+              <b>Final Exam</b>
+              <!--(<a href="Exams/324S18 Final.pdf">Solutions</a>)-->
+            </td>
+          </tr>
+
+
+        </tbody>
+      </table>
+
+      <hr>
+
+      <!--
+
+      <h4>Lecture notes<h4>
+
+      <hr>
+
+      -->
+
+
+
+
+<!--
+      <h4>Supplementary materials</h4>
+
+      <p>
+        Gilbert Strang's
+        <a href="https://ocw.mit.edu/courses/mathematics/18-06-linear-algebra-spring-2010/video-lectures/">video lectures</a>
+        are a great resource for anyone studying linear algebra.
+        Of particular interest to us are lectures 18, 19 and 20. They
+        are an excellent treatment of determinants, a subject on which I may
+        not have time to lecture.
+      </p>
+
+      <hr>
+
+    -->
+
+
+      <h4>Grades</h4>
+
+      <p>
+        The course grade will be computed based on weekly homework, one midterm
+        exam and one final exam.
+        It will be computed as follows:
+      </p>
+
+      <table class="table table-striped">
+        <tbody>
+          <tr>
+            <td>Homework (due Mondays)</td>
+            <td>25%</td>
+          </tr>
+
+          <tr>
+            <td>Midterm Exam (July 22)</td>
+            <td>30%</td>
+          </tr>
+
+          <tr>
+            <td>Final Exam (Aug 23)</td>
+            <td>45%</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>
+        The two exams will take place on the indicated dates at the same time
+        and place where lectures meet.
+      </p>
+
+      <p>
+        Grades will be published on
+        <a href="https://catalyst.uw.edu/">Catalyst</a>.
+      </p>
+
+      <hr>
+
+      <h4>Exam policies</h4>
+
+      <p>
+        Students may bring a <b>note sheet</b> to exams, which must be
+        letter-size and handwritten. Both sides are OK.
+      </p>
+
+      <p>
+        Make-up exams will not be given.
+        If you miss an exam due to unavoidable, compelling, and well-documented
+        circumstances, your final exam will be weighted more heavily.
+        In case of observance of religious holidays or participation in
+        university-sponsored activities, please contact me
+        at least one week in advance. You will be asked to provide
+        documentation for your absence.
+      </p>
+
+      <hr>
+
+
+
+      <h4>Course description</h4>
+
+      <p>
+        This course discusses linear algebra with emphasis on theory and
+        proofs. The central objects of study are finite-dimensional
+        vector spaces and linear transformations between them.
+        Topics include linear independence,
+        bases, null space and range, matrices, duality, eigenvalues,
+        inner products, the spectral theorem for normal operators, and the
+        Jordan canonical form.
+      </p>
+
+      <hr>
+
+
+
+    </body>
+
+  </html>
