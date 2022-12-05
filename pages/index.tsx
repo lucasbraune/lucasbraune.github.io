@@ -16,8 +16,8 @@ export const getStaticProps = (): { props: TProps } => (
 );
 
 const Home: FC<TProps> = ({ posts }) => (
-  <div className="prose">
-    <h1>Hello, world</h1>
+  <div className="prose mx-auto">
+    <h1 className="text-5xl">Hello, world</h1>
     <ul>
       {posts.map(post =>
         <li key={post.slug}>

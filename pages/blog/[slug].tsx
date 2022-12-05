@@ -4,6 +4,8 @@ import { ParsedUrlQuery } from "querystring";
 import { FC } from "react";
 import { TPost } from "../../lib/post";
 import { getPosts, getPostsBySlug } from "../../lib/posts";
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from "remark-gfm";
 
 interface IParams extends ParsedUrlQuery {
   slug: string;
@@ -24,14 +26,20 @@ type TProps = {
 }
 
 export const getStaticProps: GetStaticProps<TProps, IParams> = (context) => {
-  const post = context.params ? getPostsBySlug(context.params.slug) : undefined;
-  return post ? { props: { post } } : { notFound: true };
+  const post = context.params ?
+    getPostsBySlug(context.params.slug) :
+    undefined;
+  return post ?
+    { props: { post } } :
+    { notFound: true };
 };
 
 const Post: FC<TProps> = ({ post }) => (
-  <article className='prose'>
-    <h1>{post.title}</h1>
-    {post.body}
+  <article className='prose mx-auto'>
+    <h1 className="text-5xl">{post.title}</h1>
+    <ReactMarkdown remarkPlugins={[remarkGfm]}>
+      {post.body}
+    </ReactMarkdown>
     <Link href="/">Home</Link>
   </article>
 );
