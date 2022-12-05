@@ -1,31 +1,28 @@
 import fs from 'fs';
 import fm, { FrontMatterResult } from 'front-matter';
-
-type TPost = {
-    slug: string;
-    title: string;
-    date: Date;
-    body: string;
-};
+import { TPost } from './post';
+import path from 'path';
 
 type TAttributes = {
     title: string;
-    date: string;
+    date: Date;
 }
 
-function getPosts(): TPost[] {
-    const PATH = '../data/posts';
+export const getPosts = (): TPost[] => {
+    const PATH = 'data/posts';
     return fs.readdirSync(PATH)
         .map((filename: string): TPost => {
             const file: string = fs.readFileSync(PATH + '/' + filename, 'utf-8');
             const content: FrontMatterResult<TAttributes> = fm(file);
             return {
-                slug: filename,
+                slug: encodeURI(path.parse(filename).name),
                 title: content.attributes.title,
-                date: new Date(content.attributes.date),
+                date: content.attributes.date.toISOString(),
                 body: content.body
             };
         });
-}
+};
 
-export type { TPost, getPosts };
+export const getPostsBySlug = (slug: string): TPost | undefined => {
+  return getPosts().find(post => post.slug == slug);
+};
